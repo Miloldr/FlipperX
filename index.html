@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlipperX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-blur"></div>
+    <header>
+        <nav>
+            <div class="logo">FlipperX</div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div id="settings-container">
+            <form id="flipForm">
+                <div class="setting-box">
+                    <label for="flipPreference" style="margin-bottom: 10px;">Flip Preference:</label>
+                    <div class="radio-inputs">
+                        <label class="radio">
+                            <input type="radio" name="flipPreference" value="profit_90">
+                            <span class="name">Highest Profit</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="flipPreference" value="profit_75">
+                            <span class="name">Very High Profit</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="flipPreference" value="profit_60" checked>
+                            <span class="name">High Profit</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="flipPreference" value="balanced_50">
+                            <span class="name">Balanced</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="flipPreference" value="volume_60">
+                            <span class="name">Easier Flips</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="flipPreference" value="volume_75">
+                            <span class="name">Very Easy Flips</span>
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="flipPreference" value="volume_90">
+                            <span class="name">Easiest Flips</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="setting-box" style="margin-top: 50px;">
+                    <div class="input-wrapper">
+                        <input type="text" name="budget" class="input" placeholder="Enter Budget">
+                        <span class="coins-label">coins</span>
+                    </div>
+                    <button id="filter-button">Filters</button>
+                </div>
+                <button type="submit">Get Flips</button>
+            </form>
+            <p id="last-update">Last API Update: Loading...</p>
+        </div>
+        <div id="results-container">
+            <div id="results"></div>
+        </div>
+    </div>
+    <div id="filter-box" class="filter-box hidden">
+        <div class="filter-box-header">
+            <span class="close-filter-box">&times;</span>
+        </div>
+        <div class="filter-box-content">
+            <div id="blacklist-container">
+                <h2 id="blacklist-header">Blacklisted Items</h2>
+                <ul id="blacklisted-items-list"></ul>
+            </div>
+        </div>
+    </div>
+    <button id="dark-mode-toggle">🌙</button>
+    <script src="script.js"></script>
+</body>
+
+</html>
